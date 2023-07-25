@@ -82,6 +82,8 @@ def Lintegrand(r, xi, taustar, l0):
 	l0Exp = np.exp(-(r-1)/l0)
 	return dmudxi*dPdr*optExp*l0Exp
 
+# Integrand of the Gauss-Leguerre quadrature approximation
+# version
 def hintegrand(u, xi, taustar, l0):
 	r = u*l0 + r_min_1b(xi);
 
@@ -118,7 +120,7 @@ def VBCLineSP(engs, params, flux):
 	# 4) If xi[i] > 1 and xi[i+1] > 1, set flux[i] = zero.
 	#    This is both for systematic reasons and a priori. We do not expect
 	#    velocities greater than terminal speed, so it does not make sense for
-	#	 there to be flux there. This is corroborated by the model's behavior.
+	#	there to be flux there. This is corroborated by the model's behavior.
 	#    For |xi| > 1, we have to integrate arctan in the regions (-I inf, -I)
 	#    and (I, I inf), which are its branch cuts.
 	# 5) If xi[i] > 1 but xi[i+1] < 1, set flux[i] = (0.5 * Deltaxi/Larea)L(xi[i+1]).
