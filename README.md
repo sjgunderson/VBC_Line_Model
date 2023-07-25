@@ -7,8 +7,12 @@ Provided code is written for the Python wrap around of XSPEC (PyXspec). The mode
 Requirement minimums:
 
 Python 3.10.9
+
 numpy 1.23.5
+
 scipy 1.10.0
+
 XSPEC 12.12
+
 PyXspec 2.1.2
 
